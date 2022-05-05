@@ -1,0 +1,114 @@
+1-Create a new repository in the GitHub. Name it Iron+ your name. Example: if your name is Alvaro, you will name the repo IronAlvaro.
+2-Clone that repo to your computer.
+
+(base) silviadifra@Silvias-MacBook-Air git clone https://github.com/silviadifra/IronSilvia.git
+Cloning into 'IronSilvia'...
+warning: You appear to have cloned an empty repository.
+
+
+3-Create a file in that folder. Name it about.txt and add a fun fact about yourself. (You can use the command line: touch nameOfTheFile.txt).
+
+(base) silviadifra@Silvias-MacBook-Air lab-git % cd IronSilvia
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % ls
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % touch about.txt
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % ls
+about.txt
+echo "Goats were my best friends" >> about.txt
+
+
+4-Add the file you just created to the git.
+
+
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git add about.txt
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   about.txt
+
+5-Commit the changes.
+
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git commit -m "added fun fact"
+[master (root-commit) 6cf6517] added fun fact
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about.txt
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % 
+
+
+6-Push the changes to the GitHub and check your repository to make sure everything is there.
+
+
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/silviadifra/IronSilvia.git
+ * [new branch]      master -> master
+
+
+Pair Programming Exercise
+
+1-Fork your classmate's repository.
+
+2-Clone the repository, so that you have it locally and can make changes.
+
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git clone https://github.com/silviadifra/IronAude.git
+Cloning into 'IronAude'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 9 (delta 1), reused 9 (delta 1), pack-reused 0
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (1/1), done.
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % 
+
+
+3-Create a new branch named classmate.
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git checkout -b classmate 
+Switched to a new branch 'classmate'
+
+
+4-Create a new file with your name (ex. maya.txt) and finish the following sentence I enrolled 
+Ironhack's Data Analytics bootcamp because.... When you are done, save the changes.
+Add the changes to the git.
+
+
+((base) silviadifra@Silvias-MacBook-Air IronSilvia % pwd
+/Users/silviadifra/Documents/ironhack_DA/week1/day1/lab/lab-git/IronSilvia
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % touch silvia.txt
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % echo "I enrolled
+Ironhack's Data Analytics bootcamp because I want to learn how to analyse raw data" >> silvia.txt
+
+
+
+
+5-Commit and push the changes. Now, all the changes should be on your GitHub, inside the forked repository.
+
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git status
+On branch classmate
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   silvia.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	IronAude/
+
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git commit -m "added motivation"
+[classmate 9c6fd17] added motivation
+ 1 file changed, 2 insertions(+)
+ create mode 100644 silvia.txt
+(base) silviadifra@Silvias-MacBook-Air IronSilvia % git push origin master
+Everything up-to-date
+
+
+
+
+6-Create a pull request to make changes appear in the original repository.
+Merge the branch your classmate created. Now everyone's repos should have the original file (about.txt) as well as the new one with your classmate's name.
+
